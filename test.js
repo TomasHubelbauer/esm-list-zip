@@ -17,7 +17,9 @@ window.addEventListener('load', () => {
   }
 
   function printEntry(/** @type {{ name: string; offset: number; size: number; content: ArrayBuffer; }} */ entry) {
-    logMessage(`${entry.name} (@${entry.offset}, size ${entry.size}${entry.content ? `, ${entry.content.byteLength} preloaded` : ', not preloaded'})`)
+    const span = document.createElement('span');
+    span.textContent = `${entry.name}\n@${entry.offset}, ${entry.size} B${entry.content ? `, ${entry.content.byteLength} B preloaded` : ', not preloaded'}`;
+    exampleDiv.append(span);
   }
 
   function onFetch(/** @type {number} */ start,/** @type {number} */ end,/** @type {string} */ target ) {

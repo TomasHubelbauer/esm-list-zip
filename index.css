@@ -1,0 +1,11 @@
+#exampleDiv div {
+  margin: 1ex;
+}
+
+#exampleDiv span {
+  border: 1px solid silver;
+  display: inline-block;
+  margin: 1ex;
+  padding: 1ex;
+  white-space: pre;
+}
