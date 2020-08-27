@@ -51,4 +51,4 @@ As the user scrolls the list of entries, sequentially download and extract conte
 entries which are images according to their extension. Do this sequentially so we can just
 cancel the current operation once the not-yet-previewed image entry scrolls out of view.
 
-Use UZIP.js for this, but first make it available as an ESM module.
+Use https://github.com/TomasHubelbauer/esm-uzip-js for this.
