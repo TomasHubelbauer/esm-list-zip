@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ESM List ZIP</title>
+    <script src="test.js" type="module"></script>
+  </head>
+  <body>
+    <h1>ESM List ZIP</h1>
+    <div>This is an ESM (EcmaScript Modules) ZIP entry listing library for JavaScript.</div>
+    <div>
+      Find out more on
+      <a href="https://github.com/TomasHubelbauer/esm-list-zip">GitHub</a>.
+    </div>
+    <h2>Example</h2>
+    <div>Paste a URL below or leave the default sample ZIP URL and press Go.</div>
+    <div>Note: CORS applies! If your ZIP is not accessible due to CORS, see Usage.</div>
+    <div>
+      <input id="urlInput" placeholder="test.zip" />
+      <button id="goButton">Go</button>
+    </div>
+    <div id="exampleDiv"></div>
+    <h2>Usage</h2>
+    <div>
+      <pre>
+import listZip from 'https://tomashubelbauer.github.io/esm-list-zip/index.js';
+
+for await (const entry of listZip(url, onFetch, onNoRange)) {
+  // { name: string; offset: number; size: number; content?: ArrayBuffer; }
+}
+      </pre>
+    </div>
+  </body>
+</html>
