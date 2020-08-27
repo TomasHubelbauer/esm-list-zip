@@ -26,9 +26,14 @@ for await (const entry of listZip(url, onFetch, onNoRange)) {
 
 #### No Range Requests
 
-`python3 -m http.server` for `localhost:8000`
+`python3 -m http.server` or `php -S localhost:8000`
+
+Use `localhost:8000` to access.
 
 #### Range Requests
+
+Not clear at the moment if there is a built-in way to get a web server with HTTP range header
+support.
 
 ## To-Do
 
@@ -52,3 +57,10 @@ entries which are images according to their extension. Do this sequentially so w
 cancel the current operation once the not-yet-previewed image entry scrolls out of view.
 
 Use https://github.com/TomasHubelbauer/esm-uzip-js for this.
+
+### Find out if the HTTP range header is supported by PHP so we can use a built-in server
+
+https://stackoverflow.com/q/63620884/2715716
+
+I'd like to find a way to serve the static files using a web server built into macOS so
+that there is no local setup required. It looks like Python and PHP are the two options.
